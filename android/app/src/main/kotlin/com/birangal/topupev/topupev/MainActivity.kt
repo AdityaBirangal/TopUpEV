@@ -1,4 +1,4 @@
-package com.birangal.topupev.topupev
+package com.birangal.topupev
 
 import io.flutter.embedding.android.FlutterActivity
 
