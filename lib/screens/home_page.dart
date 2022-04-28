@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:topupev/screens/map_page.dart';
+import 'package:topupev/screens/profile_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class HomeScreen extends StatelessWidget {
+
+class HomePage extends StatelessWidget {
+  final User user;
+
+  const HomePage({required this.user});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +26,14 @@ class HomeScreen extends StatelessWidget {
               child: Image.asset('images/TopUpEV_Logo.png'),
             ),
           ),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfilePage(user: user)));
+          }, child: const Text('Profile Page')),
+
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MapPage()));
+          }, child: const Text('Map')),
+
           ElevatedButton(onPressed: (){
             // Navigator.push(context, MaterialPageRoute(builder: (context)=>LocationScreen()));
           }, child: Text('Find Nearby Charging Stations')),

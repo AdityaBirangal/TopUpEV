@@ -6,6 +6,7 @@ import 'package:topupev/screens/profile_page.dart';
 import 'package:topupev/screens/register_page.dart';
 import 'package:topupev/utils/fire_auth.dart';
 import 'package:topupev/utils/validator.dart';
+import 'package:topupev/screens/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -31,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
     if (user != null) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => ProfilePage(
+          builder: (context) => HomePage(
             user: user,
           ),
         ),
@@ -148,7 +149,7 @@ class _LoginPageState extends State<LoginPage> {
                                             .pushReplacement(
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                ProfilePage(user: user),
+                                                HomePage(user: user),
                                           ),
                                         );
                                       }

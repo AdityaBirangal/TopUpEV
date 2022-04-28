@@ -15,14 +15,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.cyan,
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            textStyle: const TextStyle(
-              fontSize: 24.0,
-            ),
-            padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
-          ),
-        ),
+        // elevatedButtonTheme: ElevatedButtonThemeData(
+        //   style: ElevatedButton.styleFrom(
+        //     textStyle: const TextStyle(
+        //       fontSize: 24.0,
+        //     ),
+        //     padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
+        //   ),
+        // ),
         textTheme: TextTheme(
           headline1: TextStyle(
             fontSize: 46.0,
