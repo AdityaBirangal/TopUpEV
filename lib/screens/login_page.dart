@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Firebase Authentication'),
+          title: const Text('TopUpEV'),
         ),
         body: FutureBuilder(
           future: _initializeFirebase(),
@@ -61,6 +61,13 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Flexible(
+                      child: Container(
+                        height: 160.0,
+                        child: Image.asset('images/TopUpEV_Logo.png'),
+                      ),
+                    ),
+
                     Padding(
                       padding: const EdgeInsets.only(bottom: 24.0),
                       child: Text(
