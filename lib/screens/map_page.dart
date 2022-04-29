@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import 'booking_page.dart';
+
 class MapPage extends StatefulWidget {
 
   @override
@@ -20,7 +22,7 @@ class MapPageState extends State<MapPage> {
     bearing: 192.833,
     target: LatLng(18.6783, 73.8950),
     tilt: 59.440,
-    zoom: 11.0,
+    zoom: 14.0,
   );
 
   Future<void> _goToPosition1() async {
@@ -75,6 +77,31 @@ class MapPageState extends State<MapPage> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+
+    Marker myMarker = Marker(
+      markerId: MarkerId('ABC123'),
+      position: const LatLng(18.6783, 73.8950),
+      infoWindow: InfoWindow(
+          title: 'Tata Charging Station',
+          snippet: 'Available',
+          onTap: (){
+            print('object');
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const BookingPage()));
+          }
+      ),
+      icon: BitmapDescriptor.defaultMarker,
+    );
+    _markers.add(myMarker);
+
+    setState(() {
+
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -86,7 +113,7 @@ class MapPageState extends State<MapPage> {
               onMapCreated: _onMapCreated,
               initialCameraPosition: const CameraPosition(
                 target: _center,
-                zoom: 11.0,
+                zoom: 14.0,
               ),
               mapType: _currentMapType,
               markers: _markers,
