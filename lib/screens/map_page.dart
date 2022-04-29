@@ -93,7 +93,54 @@ class MapPageState extends State<MapPage> {
       ),
       icon: BitmapDescriptor.defaultMarker,
     );
+
+    Marker myMarker2 = Marker(
+      markerId: MarkerId('XYZ321'),
+      position: const LatLng(18.6773, 73.8950),
+      infoWindow: InfoWindow(
+          title: 'Adi Charging Station',
+          snippet: 'Available',
+          onTap: (){
+            print('object');
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const BookingPage()));
+          }
+      ),
+      icon: BitmapDescriptor.defaultMarker,
+    );
+
+    Marker myMarker3 = Marker(
+      markerId: MarkerId('MMM111'),
+      position: const LatLng(18.6773, 73.8960),
+      infoWindow: InfoWindow(
+          title: 'Mayur Charging Station',
+          snippet: 'Available',
+          onTap: (){
+            print('object');
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const BookingPage()));
+          }
+      ),
+      icon: BitmapDescriptor.defaultMarker,
+    );
+
+    Marker myMarker4 = Marker(
+      markerId: MarkerId('EEE111'),
+      position: const LatLng(18.6793, 73.8950),
+      infoWindow: InfoWindow(
+          title: 'Eva Charging Station',
+          snippet: 'Available',
+          onTap: (){
+            print('object');
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const BookingPage()));
+          }
+      ),
+      icon: BitmapDescriptor.defaultMarker,
+    );
+
     _markers.add(myMarker);
+    _markers.add(myMarker2);
+    _markers.add(myMarker3);
+    _markers.add(myMarker4);
+
 
     setState(() {
 

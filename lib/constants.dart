@@ -12,6 +12,8 @@ class StationData{
   String chargerType;
   String imgUrl;
 
+  int rate;
+
 
 
   StationData({
@@ -23,6 +25,7 @@ class StationData{
     required this.lag,
     required this.chargerType,
     required this.imgUrl,
+    required this.rate,
   });
 
 }

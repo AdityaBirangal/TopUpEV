@@ -32,11 +32,8 @@ class HomePage extends StatelessWidget {
 
           ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>MapPage()));
-          }, child: const Text('Map')),
+          }, child: const Text('Find Nearby Charging Stations')),
 
-          ElevatedButton(onPressed: (){
-            // Navigator.push(context, MaterialPageRoute(builder: (context)=>LocationScreen()));
-          }, child: Text('Find Nearby Charging Stations')),
         ],
       ),),
     );
